@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "関係者専用ページ"
-AuthUserFile /kyudo/member_only/.htpasswd
+AuthUserFile /homepage/kyudo/member_only/.htpasswd
 Require valid-user
