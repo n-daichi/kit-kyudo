@@ -1,9 +1,7 @@
 /* ==========================================================
-   1. アクセス・ページ全体レイアウト
-   【使用箇所】「アクセス」「トピックス」などの各ページ
+   1. 「アクセス」「トピックス」などの各ページ
    ========================================================== */
 
-/* レイアウト：HTMLの <main class="mainFlexContainer"> と同等の役割 */
 .accessFlex {
     display: flex;
     justify-content: space-between;
@@ -36,11 +34,9 @@
 
 
 /* ==========================================================
-   2. SNS・リンク関連
-   【使用箇所】「よくある質問」「トピックス」の右側サイドバー
+   2. 「よくある質問」「トピックス」の右側サイドバー
    ========================================================== */
 
-/* SNS枠：HTMLの <div class="snsSection"> */
 .snsSection {
     background: #fdfdfd;
     padding: 15px;
@@ -48,13 +44,11 @@
     border-radius: 10px;
 }
 
-/* タイムライン表示：HTMLの <div class="snsTimeline"> */
 .snsTimeline {
     max-height: 350px; 
     overflow-y: auto;
 }
 
-/* インスタボタン：HTMLの <a class="insta-link"> */
 .insta-link {
     display: block;
     text-align: center;
@@ -66,7 +60,6 @@
     font-weight: bold;
 }
 
-/* 案内文：SNSの上に置いた説明文 */
 .contact-notice {
     background-color: #fdfdfd;
     padding: 10px;
@@ -78,17 +71,14 @@
 
 
 /* ==========================================================
-   3. ボタン関連
-   【使用箇所】「トピックス」セクション
+   3. 「トピックス」セクションのボタン関連
    ========================================================== */
 
-/* ボタン外枠：HTMLの <div class="readMoreContainer"> */
 .readMoreContainer {
     text-align: right;
     margin-top: 15px;
 }
 
-/* ボタン本体：HTMLの <a class="readMoreBtn"> */
 .readMoreBtn {
     display: inline-block;
     padding: 10px 25px;
@@ -102,14 +92,12 @@
     transition: all 0.3s ease;
 }
 
-/* ホバー：マウスを乗せた時 */
 .readMoreBtn:hover {
     background-color: #0BD;
     color: #fff;
     transform: translateX(5px);
 }
 
-/* アイコン：HTMLのボタン内にある <i class="fas fa-chevron-right"></i> */
 .readMoreBtn i {
     margin-left: 5px;
     font-size: 0.8rem;
@@ -119,7 +107,6 @@
    4. OB・OG
    ========================================================== */
 
-/* 挨拶文の装飾 */
 .letter-lead {
     margin-bottom: 20px;
 }
@@ -129,12 +116,11 @@
     margin-top: 15px;
 }
 
-/* 行事詳細ボックスの装飾 */
 .event-details {
-    background-color: #f9f9f9; /* 薄いグレー */
+    background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
-    border-left: 5px solid #00b7ce; /* 画像のバッジに合わせた水色 */
+    border-left: 5px solid #00b7ce; 
     margin: 25px 0;
 }
 
@@ -145,19 +131,18 @@
 }
 
 .event-details dt {
-    width: 5em; /* ラベルの幅を固定 */
+    width: 5em;
     font-weight: bold;
     color: #00b7ce;
     margin-bottom: 10px;
 }
 
 .event-details dd {
-    width: calc(100% - 5em); /* 残りの幅を内容に割り当て */
+    width: calc(100% - 5em);
     margin-left: 0;
     margin-bottom: 10px;
 }
 
-/* スマホ表示の際は縦並びにする */
 @media (max-width: 480px) {
     .event-details dt, 
     .event-details dd {
@@ -168,25 +153,24 @@
     }
 }
 
-/* 関係者用ページリンクの装飾 */
 .member-link-container {
     text-align: center;
     margin-top: 30px;
     padding: 20px;
-    border: 2px dashed #ccc; /* 枠線を点線にして特別感を出す */
+    border: 2px dashed #ccc;
     border-radius: 10px;
 }
 
 .member-note {
     font-size: 0.9em;
-    color: #e74c3c; /* 注意を促す赤色 */
+    color: #e74c3c;
     margin-bottom: 15px;
     font-weight: bold;
 }
 
 .btn-member {
     display: inline-block;
-    background-color: #333; /* 落ち着いた黒系 */
+    background-color: #333; 
     color: #fff;
     padding: 15px 30px;
     text-decoration: none;
@@ -197,7 +181,7 @@
 
 .btn-member:hover {
     background-color: #555;
-    transform: translateY(-2px); /* 少し浮き上がる演出 */
+    transform: translateY(-2px);
     color: #fff;
 }
 
@@ -209,7 +193,7 @@
 /* ==========================================================
    5.　関係者ページ
    ========================================================== */
-/* ログイン状態の表示 */
+
 .member-status {
     text-align: right;
     padding: 10px;
@@ -218,7 +202,6 @@
     font-weight: bold;
 }
 
-/* お知らせリスト */
 .member-news {
     list-style: none;
     padding: 0;
@@ -235,7 +218,6 @@
     margin-right: 10px;
 }
 
-/* ダウンロードボタンのグリッド */
 .download-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -264,16 +246,15 @@
 }
 
 .link-back-public {
-    color: #e74c3c !important; /* 弓道部の赤色 */
+    color: #e74c3c !important;
     font-weight: bold;
 }
 
 .link-back-public:hover {
-    color: #c0392b !important; /* ホバー時に少し暗い赤にする */
+    color: #c0392b !important;
     text-decoration: underline;
 }
 
-/* スマホ調整 */
 @media (max-width: 480px) {
     .download-grid {
         grid-template-columns: 100%;
@@ -284,30 +265,26 @@
 /* ==========================================================
    4. Q&A
    ========================================================== */
-/* 「よくある質問」ページ専用のスタイル調整 */
 
-/* 1. 全体の左右余白を狭くする */
 .faq-page {
     margin-left: 10% !important;
     margin-right: 10% !important;
 }
 
-/* 2. 質問(Q)と回答(A)の左側の余白をなくす */
 .faq-page .entryHeader,
 .faq-page .entryBody {
     margin-left: 0;
 }
 
-/* 3. 【追加】QとAを目立たせる装飾 */
 .faq-page .entryHeader h2 {
-    font-size: 1.8rem; /* 文字を少し大きく */
-    color: #0084b4;    /* 質問の色を濃い水色に */
+    font-size: 1.8rem;
+    color: #0084b4; 
 }
 
 .faq-page .entryBody p {
     font-size: 1.1rem;
     padding-left: 10px;
-    border-left: 3px solid #0BD; /* 回答の横にアクセントの縦線 */
+    border-left: 3px solid #0BD; 
 }
 
 
@@ -315,7 +292,6 @@
    4.　schedule
    ========================================================== */
 
-/* 見出し全体をボタンっぽく */
 .collapsible-header {
     background: #f8f9fa;
     border: 1px solid #ddd;
@@ -333,7 +309,6 @@
     border-color: #0084b4;
 }
 
-/* 「タップで表示」のガイド文字 */
 .tap-guide {
     font-size: 0.75rem;
     color: #0084b4;
@@ -341,7 +316,6 @@
     font-weight: bold;
 }
 
-/* ＋ボタンを大きく、丸く囲む */
 .toggle-button {
     width: 35px;
     height: 35px;
@@ -361,7 +335,6 @@
     transition: transform 0.3s;
 }
 
-/* 開いたときの変化（＋を×にする） */
 .collapsible-header.is-open {
     background: #eef9ff;
 }
@@ -370,19 +343,16 @@
     transform: rotate(45deg);
 }
 
-/* --- 予定表を最初は隠す設定 --- */
 
-/* 1. 中身（画像エリア）を完全に隠す */
 .collapsible-content {
-    max-height: 0 !important; /* 強制的に高さを0にする */
+    max-height: 0 !important;
     overflow: hidden;
     opacity: 0;
     transition: max-height 0.4s ease-out, opacity 0.3s;
 }
 
-/* 2. JavaScriptで 'is-open' クラスがついた時だけ表示する */
 .collapsible-content.is-open {
-    max-height: 1000px !important; /* 画像が見える高さにする */
+    max-height: 1000px !important; 
     opacity: 1;
     padding: 10px 0;
 }
@@ -391,15 +361,12 @@
 
 /* ==========================================================
    4. スマホ対応
-   【使用箇所】画面幅が900px以下になった時
    ========================================================== */
 @media screen and (max-width: 900px) {
-    /* 【アクセス】などの横並びを縦一列にする */
     .accessFlex {
         flex-direction: column;
     }
     
-    /* マップの高さをスマホ用に調整 */
     .locationMap iframe {
         height: 300px;
     }
@@ -407,7 +374,7 @@
 
 
 /* ==========================================================
-   tournament.html — 年度一覧カード
+   tournament.html 
    ========================================================== */
 .year-list {
     display: grid;

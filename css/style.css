@@ -2,8 +2,6 @@
 
 /* ==============================================
    1. 基本設定
-   【役割】ブラウザごとの余白の差をリセットし、
-   　　　　サイト全体の文字の種類や色を決めます。
    ============================================== */
 * {
     margin: 0;
@@ -22,7 +20,6 @@ body {
 
 /* ==============================================
    2. ヘッダー・共通タイトル
-   【役割】画面上部のロゴ、メニュー、大きな見出しのデザイン。
    ============================================== */
 header {
     display: flex;
@@ -30,18 +27,17 @@ header {
     align-items: center;
     padding: 10px 40px 0 50px;
     height: 100px;
-    background-color: rgb(197, 239, 255); /* 水色の背景 */
+    background-color: rgb(197, 239, 255);
 }
 
 header img {
-    height: 95px; /* ロゴの大きさ */
+    height: 95px;
 }
 
 .menu-toggle {
-    display: none; /* デスクトップでは隠す（スマホ用ボタン） */
+    display: none;
 }
 
-/* ナビゲーションメニュー（ホーム・アクセスなど）の並び */
 nav ul {
     display: flex;
     list-style: none;
@@ -58,7 +54,6 @@ nav a {
     font-weight: bold;
 }
 
-/* ページ最上部の特大タイトル（「活動報告」など） */
 .introTitle {
     padding: 20px 0;
     text-align: center;
@@ -72,8 +67,7 @@ nav a {
 }
 
 /* ==============================================
-   3. メインレイアウト (2カラム)
-   【役割】「記事エリア（左）」と「サイドバー（右）」の横並び設定。
+   3. 「記事エリア（左）」と「サイドバー（右）」の横並び設定。
    ============================================== */
 .mainFlexContainer {
     display: flex;
@@ -95,21 +89,19 @@ nav a {
 
 /* ==============================================
    4. 各記事カード (予定・大会・行事共通)
-   【役割】1つ1つの記事（ニュース）のデザイン。
    ============================================== */
 .entryCard {
     position: relative;
     width: 100%;
     margin-bottom: 60px;
     padding-bottom: 40px;
-    border-bottom: 1px dashed #ccc; /* 記事同士の区切り線（点線） */
+    border-bottom: 1px dashed #ccc; 
 }
 
 .entryCard:last-child {
     border-bottom: none;
 }
 
-/* 左上に浮いている丸い「○月」などのバッジ */
 .symbolBadge {
     position: absolute;
     top: 0;
@@ -117,7 +109,7 @@ nav a {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: #0BD; /* 水色 */
+    background: #0BD;
     color: #FFF;
     z-index: 10;
     text-align: center;
@@ -140,7 +132,6 @@ nav a {
     opacity: 0.8;
 }
 
-/* 記事タイトル部分（バッジと重ならないよう左に100pxあけている） */
 .entryHeader {
     margin-left: 100px;
     min-height: 80px;
@@ -156,7 +147,6 @@ nav a {
     border-bottom: 2px solid #f0f0f0;
 }
 
-/* 記事本文・写真エリア */
 .entryBody {
     margin: 20px 0 20px 100px;
 }
@@ -168,13 +158,11 @@ nav a {
     margin-bottom: 15px;
 }
 
-/* 斜線背景の「詳細・結果」ボックス */
 .detailBox {
     margin-left: 100px;
     padding: 15px;
     background: #fdfdfd;
     border-left: 5px solid #0BD;
-    /* 背景をオシャレな斜線模様にする設定 */
     background: repeating-linear-gradient(-45deg, #f9f9f9, #f9f9f9 5px, #ffffff 5px, #ffffff 10px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -190,8 +178,7 @@ nav a {
 }
 
 /* ==============================================
-   5. サイドバー (アコーディオン形式)
-   【役割】年度別メニューなど、クリックで開閉する場所のデザイン。
+   5. 年度別メニューなど、クリックで開閉する場所のデザイン。
    ============================================== */
 .sideTitle {
     font-size: 1.1rem;
@@ -204,7 +191,6 @@ nav a {
     list-style: none;
 }
 
-/* 「2024年度」などの開閉見出し */
 .yearLabel {
     padding: 10px;
     font-weight: bold;
@@ -216,19 +202,16 @@ nav a {
     align-items: center;
 }
 
-/* 右側の「▼」アイコン */
 .yearLabel::after {
     content: '▼';
     font-size: 0.7rem;
     transition: transform 0.3s;
 }
 
-/* メニューが開いているときは矢印を反対にする */
 details[open] .yearLabel::after {
     transform: rotate(180deg);
 }
 
-/* 中に隠れている月別リンクなど */
 .yearContents {
     padding-left: 15px;
 }
@@ -248,14 +231,12 @@ details[open] .yearLabel::after {
     background: #f9f9f9;
 }
 
-/* Safari向けのデフォルト矢印消し設定 */
 summary::-webkit-details-marker {
     display: none;
 }
 
 /* ==============================================
    6. フッター
-   【役割】ページ一番下の茶色のエリア。
    ============================================== */
 footer {
     margin-top: auto;
@@ -274,20 +255,18 @@ footer {
 }
 
 /* ==============================================
-   7. レスポンシブ (スマホ・タブレット対応)
-   【役割】画面が狭くなった時にレイアウトを縦長に組み替えます。
+   7. レスポンシブ
    ============================================== */
 @media screen and (max-width: 1024px) {
     .menu-toggle {
-        display: block; /* ハンバーガーボタンを表示 */
+        display: block; 
     }
     .introTitle h1 {
-        font-size: 3rem; /* タイトルを少し小さく */
+        font-size: 3rem; 
     }
 }
 
 @media screen and (max-width: 900px) {
-    /* 左右の並びをやめて、縦に並べる */
     .mainFlexContainer {
         flex-direction: column;
         margin: 20px 5%;
@@ -298,7 +277,6 @@ footer {
         width: 100%;
     }
 
-    /* バッジとタイトルの左余白をなくして中央に寄せる */
     .entryHeader,
     .entryBody,
     .detailBox {
@@ -306,7 +284,6 @@ footer {
         margin-top: 10px;
     }
 
-    /* バッジを浮かせずに普通の箱として配置 */
     .symbolBadge {
         position: static;
         width: 60px;
@@ -320,31 +297,28 @@ footer {
    8. 写真スライダー
    ========================================================== */
 
-/* スライダーの外枠 */
 .slider-container {
     position: relative;
     width: 100%;
     margin-bottom: 15px;
-    overflow: hidden; /* はみ出た画像を見えなくする */
+    overflow: hidden; 
     border-radius: 5px;
 }
 
-/* 画像を並べる部分 */
 .slider-wrapper {
     display: flex;
-    scroll-behavior: smooth; /* スルスル動くようにする */
-    overflow-x: auto; /* マウスでもスクロール可能に */
-    scrollbar-width: none; /* バーを隠す(Firefox) */
+    scroll-behavior: smooth; 
+    overflow-x: auto;
+    scrollbar-width: none; 
 }
-.slider-wrapper::-webkit-scrollbar { display: none; } /* バーを隠す(Chrome) */
+.slider-wrapper::-webkit-scrollbar { display: none; } 
 
 .slider-wrapper img {
-    flex: 0 0 100%; /* 1枚が親要素と同じ幅になるように固定 */
+    flex: 0 0 100%; 
     height: 300px;
     object-fit: cover;
 }
 
-/* 矢印ボタンのデザイン */
 .slider-btn {
     position: absolute;
     top: 50%;
@@ -361,17 +335,15 @@ footer {
 .prev { left: 0; border-radius: 0 5px 5px 0; }
 .next { right: 0; border-radius: 5px 0 0 5px; }
 
-/* ドットの親要素 */
 .slider-dots {
     text-align: center;
     padding: 10px 0;
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.3); /* 少し背景を明るくして見やすく */
+    background: rgba(255, 255, 255, 0.3);
 }
 
-/* ドット自体のデザイン */
 .dot {
     cursor: pointer;
     height: 10px;
@@ -383,10 +355,10 @@ footer {
     transition: background-color 0.6s ease;
 }
 
-/* 今表示されている写真のドット */
+
 .dot.active {
-    background-color: #8dd2ec; /* 弓道部のテーマカラーなどに合わせてください */
-    transform: scale(1.2); /* 少し大きくする */
+    background-color: #8dd2ec; 
+    transform: scale(1.2); 
 }
 
 
@@ -397,7 +369,7 @@ footer {
 .back-to-article {
     text-align: right;
     margin-top: 15px;
-    border-top: 1px dotted #ccc; /* 区切り線を入れて分かりやすく */
+    border-top: 1px dotted #ccc; 
     padding-top: 10px;
 }
 
@@ -418,7 +390,7 @@ footer {
 }
 
 /* ==============================================
-   追加: ハンバーガーメニュー スタイル
+   ハンバーガーメニュー
    ============================================== */
 .menu-toggle {
     display: none;
@@ -437,7 +409,6 @@ footer {
     background: rgba(67, 34, 0, 0.08);
 }
 
-/* スマホ時のナビメニュー（デフォルト非表示） */
 @media screen and (max-width: 1024px) {
     .menu-toggle {
         display: block;
@@ -493,17 +464,15 @@ footer {
         padding-left: 14px;
     }
 
-    /* メニューが開いているときの背景オーバーレイ */
     body:has(.nav-menu.is-open)::before {
         content: '';
         position: fixed;
         inset: 0;
         background: rgba(0,0,0,0.4);
         z-index: 98;
-        pointer-events: none; /* オーバーレイがクリックをブロックしないように */
+        pointer-events: none; 
     }
 
-    /* メニュー自体はオーバーレイより確実に上 */
     .nav-menu.is-open {
         z-index: 200;
         pointer-events: auto;
@@ -517,7 +486,7 @@ footer {
 }
 
 /* ==============================================
-   追加: デザイン改善 — ヘッダーに影とボーダー
+  ヘッダーに影とボーダー
    ============================================== */
 header {
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
@@ -527,7 +496,6 @@ header {
     z-index: 50;
 }
 
-/* ナビリンクのホバー下線アニメーション */
 nav a {
     position: relative;
     padding-bottom: 3px;
@@ -549,7 +517,7 @@ nav a:hover::after {
 }
 
 /* ==============================================
-   追加: デザイン改善 — entryCardにホバー効果
+   entryCardにホバー効果
    ============================================== */
 .entryCard {
     transition: box-shadow 0.3s ease;
@@ -562,14 +530,14 @@ nav a:hover::after {
 }
 
 /* ==============================================
-   追加: デザイン改善 — フッターをよりリッチに
+    フッター
    ============================================== */
 footer {
     background: linear-gradient(135deg, #432 0%, #5a3a28 100%);
 }
 
 /* ==============================================
-   追加: スマホ対応 — タイトルとナビの調整
+   スマホ対応
    ============================================== */
 @media screen and (max-width: 600px) {
     .introTitle h1 {
