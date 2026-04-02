@@ -37,13 +37,11 @@ document.querySelectorAll('.slider-wrapper').forEach(wrapper => {
     });
 });
 
-// --- 2. ページ内リンク & 一番上に戻る (Smooth Scroll) ---
-// ※ href が "#" のみ、または "#id" 形式（同一ページ内）のリンクだけ対象
+// --- 2. ページ内リンク & 一番上に戻る ---
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
 
-        // 別ページへの遷移（例：event.html#xxx）は除外する
         if (!href || href.includes('.html')) return;
 
         e.preventDefault();
@@ -91,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // メニュー外クリックで閉じる（ナビリンク以外）
+        // メニュー外クリックで閉じる
         document.addEventListener('click', (e) => {
             if (navMenu.classList.contains('is-open') &&
                 !toggleBtn.contains(e.target) &&
@@ -99,12 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 closeMenu();
             }
         });
-
-        // ナビリンクは通常遷移を妨げず、遷移後にメニューが残らないよう閉じる
-        // ただし preventDefault はしない
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                // 少し遅らせて閉じる（遷移を邪魔しないため）
                 setTimeout(closeMenu, 50);
             });
         });
