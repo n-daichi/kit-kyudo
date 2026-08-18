@@ -357,22 +357,6 @@
     padding: 10px 0;
 }
 
-
-
-/* ==========================================================
-   4. スマホ対応
-   ========================================================== */
-@media screen and (max-width: 900px) {
-    .accessFlex {
-        flex-direction: column;
-    }
-    
-    .locationMap iframe {
-        height: 300px;
-    }
-}
-
-
 /* ==========================================================
    tournament.html 
    ========================================================== */
@@ -431,4 +415,43 @@
     line-height: 1.8;
     border-top: 1px solid #f0f0f0;
     padding-top: 12px;
+}
+
+/* ==========================================================
+   schedule
+   ========================================================== */
+.galleryContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery-item {
+    width: calc(25% - 10px);
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ==========================================================
+スマホ対応
+   ========================================================== */
+@media screen and (max-width: 900px) {
+    .accessFlex {
+        flex-direction: column;
+    }
+    
+    .locationMap iframe {
+        height: 300px;
+    }
 }
