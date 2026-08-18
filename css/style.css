@@ -41,6 +41,7 @@ header img {
 nav ul {
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 nav li {
