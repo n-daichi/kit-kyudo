@@ -158,6 +158,11 @@ nav a {
     margin: 20px 0 20px 100px;
 }
 
+/* 記事本文の段落どうしに余白を入れる */
+.entryBody p {
+    margin: 0 0 0.8em;
+}
+
 .entryBody img {
     width: 100%;
     height: auto;
@@ -192,6 +197,11 @@ nav a {
     margin: 0 0 10px 0;
     font-size: 1.1rem;
     color: #0BD;
+}
+
+/* 「大会結果」「的中結果」など、2つ目以降の見出しの上に間隔を空ける */
+.detailBox ul + h3 {
+    margin-top: 18px;
 }
 
 .detailBox ul {

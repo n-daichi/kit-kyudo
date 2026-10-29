@@ -92,6 +92,11 @@
     transition: all 0.3s ease;
 }
 
+/* 「詳しく見る」ボタンを2つ並べるときの間隔 */
+.readMoreContainer .readMoreBtn + .readMoreBtn {
+    margin-left: 10px;
+}
+
 .readMoreBtn:hover {
     background-color: #0BD;
     color: #fff;
@@ -516,6 +521,64 @@
     margin: 0 auto;
 }
 
+/* 写真館の注意書き・行事ごとの見出し（枠の幅は .galleryContainer にそろえる） */
+.gallery-notice,
+.galleryEventTitle {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.gallery-notice {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.galleryEventTitle {
+    margin-top: 30px;
+    font-size: 1.4rem;
+}
+
+.galleryEventTitle::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 1.1em;
+    margin-right: 10px;
+    background: #0BD;
+    vertical-align: -0.15em;
+}
+
+/* 写真館の目次（各行事のセクションへ飛ぶボタン） */
+.galleryIndex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    max-width: 1200px;
+    margin: 20px auto 0;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.galleryIndex a {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid #0BD;
+    border-radius: 999px;
+    background: #fff;
+    color: #0BD;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.galleryIndex a:hover {
+    background: #0BD;
+    color: #fff;
+}
+
 .gallery-item {
     overflow: hidden;
     border-radius: 10px;
@@ -534,6 +597,12 @@
         grid-template-columns: 1fr;
         gap: 16px;
         padding: 20px;
+    }
+
+    .gallery-notice,
+    .galleryEventTitle,
+    .galleryIndex {
+        padding: 0 20px;
     }
 }
 
